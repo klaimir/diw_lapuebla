@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+    box-sizing: border-box;
+}
+
+.cta-container {
+    height: 100vh;
+    background-image: url("cta-background.jpg");
+    /* Imagen de fondo */
+    background-size: cover;
+    /* Cubre completamente el contenedor */
+    background-position: center center;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    /* No se repite la imagen de fondo */
+    background-attachment: fixed;
+    /* Fondo fijo en la ventana */
+    opacity: 0.9;
+    /* Opacidad del contenedor */
+    text-align: center;
+    /* Alineación del contenido al centro */
+    padding: 60px;
+}
+
+.cta-text {
+    font-size: 24px;
+}
+
+.cta-button {
+    background-color: #FF5733;
+    /* Color de fondo del botón */
+    color: #fff;
+    margin-top: 10px;
+    /* Color del texto del botón en blanco */
+    padding: 10px 20px;
+    /* Relleno del botón */
+    border: none;
+    /* Sin borde */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    font-size: 18px;
+    cursor: pointer;
+    /* Cambio de cursor al pasar el ratón */
+}

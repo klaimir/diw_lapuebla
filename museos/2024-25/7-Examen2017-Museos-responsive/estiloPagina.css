@@ -1,0 +1,56 @@
+#imagenes {
+	padding: 10px;
+	clear: both;
+	overflow: hidden;
+}
+
+#imagenes div {
+	float: left;
+	width: 33.3%;
+	box-sizing: border-box;
+	padding: 10px;
+	height: 200px;
+	text-align: center;
+	position: relative;
+	/* Necesario para centrar el contenido con posición absoluta */
+}
+
+#imagenes img {
+	border-radius: 40px;
+	max-width: 90%;
+	max-height: 90%;
+}
+
+/************ Maquetación tablet o superior **********/
+@media (min-width: 551px) {
+	#imagenes img {
+		position: absolute;
+		left: 5px;
+	}
+
+	#imagenes div span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 90%;
+		/* Asegura que el texto ocupe todo el ancho del contenedor */
+	}
+}
+
+/************ Maquetación tablet **********/
+@media (max-width: 1000px) {
+	#imagenes div {
+		width: 50%;
+	}
+}
+
+/************ Maquetación móvil ************/
+@media (max-width: 550px) {
+
+	#imagenes div {
+		width: 100%;
+		float: none;
+		height: auto;
+	}
+}

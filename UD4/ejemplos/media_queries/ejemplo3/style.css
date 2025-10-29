@@ -1,0 +1,31 @@
+img {
+    width: 25%;
+    float: left;
+    box-sizing: border-box;
+    padding: 25px;
+}
+
+@media (max-width: 1000px) {
+    img {
+        width: 33.33%;
+    }
+}
+
+@media (min-width: 401px) and (max-width: 700px) {
+    img {
+        width: 50%;
+        border: 1pt dotted;
+    }
+
+    div {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    img {
+        width: 100%;
+    }
+}

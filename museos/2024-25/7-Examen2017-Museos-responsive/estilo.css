@@ -1,0 +1,194 @@
+/* Descomentar reglas para visualizar nav y main maquetados con floating */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background-color: rgb(238, 238, 238);
+	font-family: Verdana;
+}
+
+#wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	border: 2px solid rgb(30, 0, 138);
+	box-sizing: border-box;
+}
+
+header {
+	background-image: url(imagenes/header.jpg);
+	height: 222px;
+	/** ponemos la altura, sino no aparece la imagen de cabecera*/
+	border-bottom: 2px solid rgb(0, 0, 0);
+
+}
+
+#rotulo {
+	position: relative;
+	top: 170px;
+	font-size: 2em;
+	font-weight: bold;
+	color: white;
+	float: right;
+	padding-right: 5px;
+}
+
+nav {
+	/*
+	width: 30%;
+	float: left;*/
+	/**para que quede pegado a la izquierda, rectangulo de la izquierda*/
+	background-color: rgb(231, 228, 255);
+	border-right: 2px solid rgb(0, 0, 0);
+	font-weight: bold;
+	color: rgb(84, 44, 78);
+	font-size: 1em;
+	/*box-sizing: border-box;*/
+}
+
+nav a {
+	text-decoration: none;
+
+}
+
+nav ul {
+	padding: 20px;
+	list-style: none;
+}
+
+nav ul li:first-child {
+	margin-bottom: 20px;
+}
+
+nav a:hover {
+	color: brown;
+}
+
+nav p {
+	padding-left: 10px;
+}
+
+main {
+	/*width: 70%;*/
+	background-color: white;
+	position: relative;
+	/*float: left;*/
+	font-size: 12px;
+	text-indent: 1.8em;
+	text-align: justify;
+	/*box-sizing: border-box;*/
+	padding: 5px;
+}
+
+main h1 {
+	color: rgb(30, 0, 138);
+	text-align: center;
+	padding-top: 20px;
+}
+
+nav #recuadro {
+	background-color: white;
+	color: rgb(160, 98, 81);
+	clear: both;
+	/**PONEMOS EL CLEAR BOTH PARA QUE NO FALLE NADA DESPUES DE COLOCAR EL FLOAT  */
+	text-align: center;
+	border-radius: 10px;
+}
+
+
+footer {
+	clear: both;
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+	overflow: hidden;
+	background-image: url(imagenes/mar2.jpg);
+	background-repeat: repeat;
+	background-position: center;
+	border-top: 1px solid #000;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+footer div {
+	float: left;
+	padding: 20px;
+	width: 50%;
+	box-sizing: border-box;
+}
+
+/*********** usando flexbox **************/
+#wrapper-container {
+	display: flex;
+}
+
+nav {
+	flex: 1 1 20%;
+	/* Ocupa el 30% del ancho del contenedor */
+}
+
+main {
+	flex: 1 1 80%;
+	/* Ocupa el 70% del ancho del contenedor */
+}
+
+/************ Maquetación tablet **********/
+@media (max-width: 1000px) {
+	#wrapper {
+		border: 0px;
+	}
+}
+
+/************ Maquetación móvil ************/
+@media (max-width: 550px) {
+
+	/* Eliminamos float para que ocupe todo el ancho */
+	/*
+	main,
+	nav {
+		width: 100%;
+		float: none;		
+	}
+	*/
+	#wrapper-container {
+		display: flex;
+		/* Activa Flexbox */
+		flex-direction: column;
+		/* Coloca los elementos en columna, uno debajo del otro */
+	}
+
+	nav,
+	main {
+		flex: 1;
+		/* Ambos elementos ocupan el mismo espacio vertical (50% cada uno) */
+	}
+
+	header {
+		position: relative;
+	}
+
+	#rotulo {
+		text-align: center;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		float: none;
+	}
+
+	footer div {
+		width: 100%;
+		float: none;
+	}
+
+	nav,
+	header {
+		border: 0px;
+	}
+
+	ul li {
+		text-align: center;
+	}
+}

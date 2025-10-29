@@ -1,0 +1,90 @@
+#formacion li,
+#experiencia li {
+    color: #00F;
+}
+
+#formacion li strong,
+#experiencia li strong {
+    color: #000;
+}
+
+@media (min-width: 1201px) {
+    #datos {
+        float: left;
+        width: 30%;
+    }
+
+    #curriculo {
+        float: left;
+        width: 70%;
+    }
+
+    #formacion {
+        float: left;
+        width: 50%;
+    }
+
+    #experiencia {
+        float: left;
+        width: 50%;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1200px) {
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    #datos {
+        float: left;
+        width: 30%;
+    }
+
+    #curriculo {
+        float: left;
+        width: 70%;
+    }
+
+    #datos ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    #datos li+li {
+        margin-top: 10px;
+    }
+
+    #datos li strong {
+        display: block;
+    }
+}
+
+
+@media (max-width: 600px) {
+    body {
+        font-family: Arial, sans-serif;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 1.2em;
+        border-bottom: 1px solid #000;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    li+li {
+        margin-top: 10px;
+    }
+
+    li strong {
+        display: block;
+    }
+}

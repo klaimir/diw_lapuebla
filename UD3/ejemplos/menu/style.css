@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;    
+}
+
+nav li {
+    display: inline; /* Hace que los ítems del menú estén en una línea horizontal */
+    margin-right: 20px; /* Espacio entre los ítems del menú */
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}

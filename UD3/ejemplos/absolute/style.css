@@ -1,0 +1,25 @@
+.a {
+    /*position: relative;*/
+    /*cambia este valor a static para ver la diferencia*/
+    width: 300px;
+    height: 300px;
+    border: 2px dotted purple;
+}
+
+.b {
+    position: absolute;
+    /*Se posiciona de forma relativa al primer elemento padre que tiene una posición distinta a static*/
+    background-color: #e1f4fc;
+    top: 60px;
+    right: 0px;
+    width: 200px;
+    height: 80px;
+    border: 3px solid blue;
+}
+
+.c {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px dotted rgb(0, 128, 19);
+}
