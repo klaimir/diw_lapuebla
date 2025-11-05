@@ -11,21 +11,24 @@ img {
     }
 }
 
-@media (min-width: 401px) and (max-width: 700px) {
+@media (max-width: 700px) {
     img {
         width: 50%;
-        border: 1pt dotted;
     }
+}
 
-    div {
-        float: none;
-        display: block;
-        width: 100%;
+@media (min-width: 401px) and (max-width: 1000px) {
+    img {
+        border: 1pt dotted;
     }
 }
 
 @media (max-width: 400px) {
     img {
         width: 100%;
+    }
+
+    h1 {
+        text-align: center;
     }
 }
