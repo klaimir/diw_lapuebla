@@ -1,0 +1,93 @@
+/* Estilos básicos */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor de la barra de navegación */
+nav {
+    background-color: #333;
+    padding: 10px;
+    color: white;
+    position: relative;
+}
+
+/* Menú de navegación normal */
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #ff6600;
+}
+
+/* Icono del menú hamburguesa (oculto en desktop) */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Menú hamburguesa */
+.menu-hamburguesa {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #333;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0;
+}
+
+.menu-hamburguesa li {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #444;
+}
+
+.menu-hamburguesa a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu-hamburguesa a:hover {
+    color: #ff6600;
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+
+    /* Ocultar el menú de navegación normal */
+    .menu {
+        display: none;
+    }
+
+    /* Mostrar el ícono de hamburguesa */
+    .hamburger {
+        display: block;
+    }
+
+    /* Mostrar el menú hamburguesa cuando el checkbox está activado */
+    #menu-toggle:checked+.menu-hamburguesa {
+        display: block;
+    }
+}

@@ -1,0 +1,177 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: rgb(238, 238, 238);
+  font-family: Verdana;
+}
+
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  min-height: 100vh;
+  margin: 0 auto;
+  border: 2px solid rgb(30, 0, 138);
+}
+
+header {
+  background-image: url(imagenes/header.jpg);
+  height: 222px;
+  /* ponemos la altura, sino no aparece la imagen de cabecera */
+  border-bottom: 2px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+#rotulo {
+
+  padding: 1%;
+  font-size: 2em;
+  font-weight: bold;
+  color: white;
+}
+
+#contenedor {
+  display: flex;
+  flex-grow: 1;
+
+}
+
+nav {
+  flex: 1 0 20%;
+  background-color: rgb(231, 228, 255);
+  border-right: 2px solid rgb(0, 0, 0);
+  font-weight: bold;
+  color: rgb(84, 44, 78);
+  font-size: 1em;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav ul {
+  padding: 20px;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+
+}
+
+nav ul li:first-child {
+  margin-bottom: 20px;
+}
+
+nav a:hover {
+  color: brown;
+}
+
+main {
+  flex: 1 1 80%;
+  background-color: white;
+  font-size: 12px;
+  text-indent: 1.8em;
+  text-align: justify;
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+main h1 {
+  color: rgb(30, 0, 138);
+  text-align: center;
+  padding-top: 20px;
+}
+
+nav #recuadro {
+  background-color: white;
+  color: rgb(160, 98, 81);
+  text-align: center;
+  border-radius: 10px;
+}
+
+div img {
+  border-radius: 20px;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+footer {
+  background-image: url(imagenes/mar2.jpg);
+  background-repeat: repeat;
+  background-position: center;
+  border-top: 1px solid #000;
+  text-align: center;
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  display: flex;
+}
+
+footer div {
+  flex: 1 1 50%;
+  padding: 20px;
+}
+
+#info-museos {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#info-museos div {
+  flex: 1 1 33.3%;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/*Tablet*/
+@media (max-width: 1000px) {
+  #info-museos div {
+    flex: 1 1 50%;
+  }
+}
+
+/*Móvil*/
+@media (max-width: 700px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  #rotulo {
+    text-align: center;
+    color: white;
+  }
+
+  #contenedor {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 4%;
+  }
+
+  nav {
+    border-bottom: 2px solid black;
+    border-right: none;
+    text-align: center;
+  }
+
+  #info-museos {
+    flex-direction: column;
+  }
+
+  footer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Menú de Navegación</title>
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <nav>
+        <!-- Ícono del menú hamburguesa -->
+        <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+
+        <!-- Menú normal (desktop) -->
+        <ul class="menu">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+
+        <!-- Menú hamburguesa (mobile) -->
+        <ul class="menu-hamburguesa" id="menu-hamburguesa">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Portafolio</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <!-- JavaScript para controlar el menú hamburguesa -->
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu-hamburguesa");
+            // Alterna entre mostrar y ocultar el menú
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

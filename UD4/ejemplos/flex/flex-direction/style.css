@@ -1,0 +1,60 @@
+#flex-container1{
+  display: flex;
+  flex-direction: row;
+}
+#flex-container1 div{
+  width: 100px;
+  height: 50px;
+  color: #FFF;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #9B59B6;
+}
+#flex-container2{
+  display: flex;
+  flex-direction: row-reverse;
+}
+#flex-container2 div{
+  width: 100px;
+  height: 50px;
+  color: #FFF;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Arial;
+  background-color: #C0392B;
+}
+#flex-container3{
+  display: flex;
+  flex-direction: column;
+}
+#flex-container3 div{
+  width: 100px;
+  height: 50px;
+  color: #FFF;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Arial;
+  background-color: #3498DB;
+}
+#flex-container4{
+  display: flex;
+  flex-direction: column-reverse;
+}
+#flex-container4 div{
+  width: 100px;
+  height: 50px;
+  color: #FFF;
+  text-align: center;
+  line-height: 50px;
+  margin: 10px;
+  font-size: 20px;
+  font-family: Arial;
+  background-color: #17A589;
+}

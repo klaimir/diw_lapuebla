@@ -1,0 +1,10 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.camara {
+    font-size: 2rem;
+    color: blue;
+}
