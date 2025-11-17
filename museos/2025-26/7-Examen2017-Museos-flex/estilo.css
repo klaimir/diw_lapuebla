@@ -74,7 +74,8 @@ main {
 	font-size: 12px;
 	text-indent: 1.8em;
 	text-align: justify;
-	padding: 10px;;
+	padding: 10px;
+	;
 }
 
 main h1 {
@@ -136,7 +137,17 @@ footer div {
 
 /*Tablet*/
 @media (max-width: 1000px) {
-  #info-museos div {
-    flex: 0 0 50%;
-  }
+	#info-museos div {
+		flex: 0 0 50%;
+	}
 }
+
+/* Medios de impresión @media */
+
+@media print {
+	footer {
+		display: none;
+	}
+}
+
+/* @import url("estiloPrint.css") print; */
