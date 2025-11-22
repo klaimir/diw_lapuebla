@@ -5,6 +5,10 @@ body {
     padding: 0;
 }
 
+.hide {
+    display: none;
+}
+
 /* Contenedor de la barra de navegación */
 nav {
     background-color: #333;
@@ -18,8 +22,6 @@ nav {
     display: flex;
     justify-content: center;
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .menu li {
@@ -48,8 +50,6 @@ nav {
 .menu-hamburguesa {
     display: none;
     list-style: none;
-    padding: 0;
-    margin: 0;
     background-color: #333;
     position: absolute;
     width: 100%;
