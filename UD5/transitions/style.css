@@ -1,0 +1,19 @@
+/* Estilos básicos */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.caja1 {
+    height: 100px;
+    background-color: #C0392B;
+    transition: background-color 1s linear, color 2s linear;
+}
+
+.caja1:hover {
+    background-color: #3F51B5;
+    color: red;
+}

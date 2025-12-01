@@ -1,0 +1,54 @@
+.grid-child {
+    border: 1px solid black;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 8px;
+    /*
+    justify-items: center;
+    align-items: center;
+    */
+}
+    
+.div1 {
+    grid-row: span 3 / span 3;
+    display: grid;
+}
+
+.div2 {
+    grid-column: span 2 / span 2;
+    display: grid;
+}
+
+.div3 {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    display: grid;
+}
+
+.div4 {
+    grid-row: span 2 / span 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    display: grid;
+}
+
+.span-div1 {
+    place-self: center;    
+}
+
+.span-div2 {
+    place-self: start end;    
+}
+
+.span-div3 {
+    place-self: end start;    
+}
+
+.span-div4 {
+    place-self: center end;    
+}
