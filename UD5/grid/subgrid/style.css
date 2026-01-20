@@ -16,6 +16,8 @@
 .div1 {
     grid-row: span 3 / span 3;
     display: grid;
+    justify-content: center;
+    align-items: center;
 }
 
 .div2 {
@@ -37,9 +39,11 @@
     display: grid;
 }
 
+/*
 .span-div1 {
-    place-self: center;    
+    place-self: center center;    
 }
+    */
 
 .span-div2 {
     place-self: start end;    

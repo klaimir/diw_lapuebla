@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+    /* Estilos predeterminados (modo claro) */
+    background-color: white;
+    color: black;
+}
+
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: gray;
+    color: white;
+}
+
+/* Estilos para modo oscuro (detectado automáticamente) */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #333;
+        color: white;
+    }
+}
+
+/* Estilos para modo oscuro (cambiado manualmente) */
+[data-theme='dark'] {
+    background-color: #333;
+    color: white;
+}

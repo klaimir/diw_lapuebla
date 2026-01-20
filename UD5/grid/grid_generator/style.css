@@ -10,7 +10,7 @@
 }
 
 .div1 {
-    grid-column: 1 / -1; /* Ocupa todas las columnas (1 a 4) */
+    grid-column: 1 / -1; /* Ocupa todas las columnas (1 a 5) */
 }
 
 .div2 {
