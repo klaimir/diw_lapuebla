@@ -1,0 +1,57 @@
+:root {
+    --btn-bg-color: #3498db;
+    /* Azul */
+    --btn-color: #fff;
+    /* Blanco */
+    --btn-hover-bg-color: #2980b9;
+    /* Azul oscuro */
+    --btn-hover-color: #fff;
+    /* Blanco */
+    --btn-disabled-bg-color: #95a5a6;
+    /* Gris */
+    --btn-disabled-color: #7f8c8d;
+    /* Gris oscuro */
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: var(--btn-bg-color);
+    color: var(--btn-color);
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover:not([disabled]) {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--btn-hover-color);
+}
+
+button:disabled {
+    background-color: var(--btn-disabled-bg-color);
+    color: var(--btn-disabled-color);
+    cursor: not-allowed;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+}
+
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 720px) {
+    video {
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+}

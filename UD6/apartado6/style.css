@@ -1,0 +1,7 @@
+/* #lienzo */
+canvas {
+    border: 2px black solid;
+    position: relative;
+    top: 100px;
+    left: 200px
+}

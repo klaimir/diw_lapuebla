@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio en JS</title>
+</head>
+
+<body>
+    <video id="video" width="700" height="350">
+        <source src="video.mp4">
+        <source src="video.ogv">
+    </video>
+    <input type="button" id="boton" value="Reproducir">
+    <input type="button" id="boton2" value="Pausa">
+    <input type="button" id="boton3" value="Reproducir2">
+
+    <script>
+        function iniciar() {
+            var boton = document.getElementById('boton');
+            boton.addEventListener('click', presionar, false);
+            var boton2 = document.getElementById('boton2');
+            boton2.addEventListener('click', pausar, false);
+            var boton3 = document.getElementById('boton3');
+            boton3.addEventListener('click', presionar2, false);
+        }
+        function presionar2() {
+            var medio = document.getElementById('video');
+            if (!medio.paused && !medio.ended) {
+                medio.pause();
+                boton3.value = 'Reproducir';
+            }
+            else {
+                medio.play();
+                boton3.value = 'Pausa';
+            }
+        }
+        function presionar() {
+            var video = document.getElementById('video');
+            video.play();
+        }
+        function pausar() {
+            var video = document.getElementById('video');
+            video.pause();
+        }
+        window.addEventListener('load', iniciar, false); 
+    </script>
+</body>
+
+</html>
