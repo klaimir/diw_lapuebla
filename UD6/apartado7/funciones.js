@@ -20,11 +20,15 @@ function run() {
 }
 function accionesJuego() {
     //Modificamos la dirección que tendrá nuestro player en función de la tecla presionada   
-    if (lastPress == KEY_RIGHT && x != canvas.width-10)
+    if (lastPress == KEY_RIGHT)
         x += 5;
 
-    if (lastPress == KEY_LEFT && x != 0)
+    if (lastPress == KEY_LEFT)
         x -= 5;
+
+    //verificaremos si el player ha salido del canvas, en cuyo caso, haremos que aparezca por el otro lado:
+    if (x >= canvas.width)
+        x = 0;
 
 }
 function pintarLienzo(lienzo) {
@@ -39,3 +43,12 @@ document.addEventListener('keydown', function (evt) {
     lastPress = evt.keyCode;
 }, false);
 window.addEventListener("load", iniciar, false);
+
+
+
+
+function pausar() {
+    alert("HOLA");
+}
+var btnPausar = document.getElementById('pausar');
+btnPausar.addEventListener('click', pausar, false);
