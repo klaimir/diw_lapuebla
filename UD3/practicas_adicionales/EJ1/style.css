@@ -1,0 +1,11 @@
+.ej1 {
+    width: 300px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid black;
+    /*margin: 0 auto;*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    margin-bottom: 200px;
+}
