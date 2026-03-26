@@ -1,0 +1,15 @@
+$principal: #d28314;
+
+// Variables globales
+$primary: $principal;
+$enable-rounded: false;
+
+// Variables de button
+$btn-font-size: 2rem;
+$btn-border-width: 1rem;
+
+@import "../../vendor/bootstrap/scss/bootstrap.scss";
+
+.btn-primary {
+  border: 3px solid black;
+}

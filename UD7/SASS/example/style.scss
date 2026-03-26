@@ -1,0 +1,65 @@
+// Variables
+$color-primario: #3498db;
+$color-secundario: #e74c3c;
+$color-terciario: #2ecc71;
+$tamano-fuente: 16px;
+$espaciado: 20px;
+
+// Mapa de estilos de botones
+$estilos-botones: (
+    default: (fondo: $color-primario,
+        color-texto: white,
+    ),
+    secundario: (fondo: $color-secundario,
+        color-texto: white,
+    ),
+    exitoso: (fondo: $color-terciario,
+        color-texto: white,
+    ),
+);
+
+// Estilos
+.contenedor {
+    padding: $espaciado;
+    background-color: #f0f0f0;
+
+    h1 {
+        font-size: $tamano-fuente;
+        color: $color-primario;
+    }
+
+    ul {
+        list-style: none;
+
+        li {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.boton {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &.default {
+        background-color: map-get($estilos-botones, default, fondo);
+        color: map-get($estilos-botones, default, color-texto);
+    }
+
+    &.secundario {
+        background-color: map-get($estilos-botones, secundario, fondo);
+        color: map-get($estilos-botones, secundario, color-texto);
+    }
+
+    &.exitoso {
+        background-color: map-get($estilos-botones, exitoso, fondo);
+        color: map-get($estilos-botones, exitoso, color-texto);
+    }
+
+    &:hover {
+        border-color: darken(map-get($estilos-botones, default, fondo), 10%);
+    }
+}

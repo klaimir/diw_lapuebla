@@ -1,0 +1,39 @@
+.contenedor {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+.contenedor h1 {
+  font-size: 16px;
+  color: #3498db;
+}
+.contenedor ul {
+  list-style: none;
+}
+.contenedor ul li {
+  margin-bottom: 10px;
+}
+
+.boton {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.boton.default {
+  background-color: #3498db;
+  color: white;
+}
+.boton.secundario {
+  background-color: #e74c3c;
+  color: white;
+}
+.boton.exitoso {
+  background-color: #2ecc71;
+  color: white;
+}
+.boton:hover {
+  border-color: rgb(33.1380753138, 125.1882845188, 186.8619246862);
+}
+
+/*# sourceMappingURL=style.css.map */
