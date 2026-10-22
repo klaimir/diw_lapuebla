@@ -1,0 +1,16 @@
+#id {
+    color: blue;
+}
+
+.sel1 {
+    color: lightgreen;
+}
+
+.sel1 > span {
+    color: lightcoral;
+}
+
+.sel1 span {
+    color: rgb(246, 1, 1);
+}
+

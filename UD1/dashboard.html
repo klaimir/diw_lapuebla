@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Gestión</title>
+    <!-- CSS de Bootstrap CDN -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background-color: #212529;
+        }
+
+        .card-metric {
+            border-left: 4px solid #0d6efd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- 1. NAVEGACIÓN LATERAL (Sidebar) -->
+            <nav class="col-md-3 col-lg-2 d-md-block sidebar text-white p-3 collapse">
+                <h5 class="text-center mb-4">SaaS Control</h5>
+                <ul class="nav flex-column gap-2">
+                    <li class="nav-item"><a class="nav-link text-white active" href="#">📊 Dashboard</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">📦 Inventario</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">👥 Clientes</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#">⚙️ Configuración</a></li>
+                </ul>
+            </nav>
+
+            <!-- CONTENIDO PRINCIPAL -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4 bg-light">
+                <!-- Barra superior -->
+                <header
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Panel Principal</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <button type="button" class="btn btn-sm btn-outline-secondary">Exportar CSV</button>
+                    </div>
+                </header>
+
+                <!-- 2. CONTENEDORES DE MÉTRICAS (Cards) -->
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mb-4">
+                    <div class="col">
+                        <div class="card p-3 shadow-sm card-metric">
+                            <small class="text-muted text-uppercase">Ventas Mensuales</small>
+                            <h3 class="fw-bold m-0">$45,231</h3>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3 shadow-sm border-start border-success border-4">
+                            <small class="text-muted text-uppercase">Nuevos Usuarios</small>
+                            <h3 class="fw-bold m-0">+1,240</h3>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card p-3 shadow-sm border-start border-warning border-4">
+                            <small class="text-muted text-uppercase">Tareas Pendientes</small>
+                            <h3 class="fw-bold m-0">18</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3. TABLA DE DATOS DENSOS -->
+                <div class="card shadow-sm">
+                    <div class="card-header bg-white py-3">
+                        <h5 class="mb-0 text-secondary">Últimos Movimientos</h5>
+                    </div>
+                    <div class="table-responsive p-3">
+                        <table class="table table-hover table-striped align-middle">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Producto</th>
+                                    <th>Estado</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#1024</td>
+                                    <td>Licencia Corporativa Premium</td>
+                                    <td><span class="badge bg-success">Activo</span></td>
+                                    <td><button class="btn btn-sm btn-primary">Editar</button></td>
+                                </tr>
+                                <tr>
+                                    <td>#1023</td>
+                                    <td>Soporte Técnico Extendido</td>
+                                    <td><span class="badge bg-warning text-dark">Pendiente</span></td>
+                                    <td><button class="btn btn-sm btn-primary">Editar</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+</body>
+
+</html>
