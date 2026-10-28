@@ -1,13 +1,9 @@
 * {
-    margin: 0;
-    padding: 0;
     font-family: Arial;
-    box-sizing: border-box;
 }
 
 .cta-container {
-    height: 100vh;
-    background-image: url("cta-background.jpg");
+    background-image: url("https://www.w3schools.com/howto/img_parallax.jpg");
     /* Imagen de fondo */
     background-size: cover;
     /* Cubre completamente el contenedor */
@@ -22,6 +18,7 @@
     text-align: center;
     /* Alineación del contenido al centro */
     padding: 60px;
+    height: 100vh;
 }
 
 .cta-text {
@@ -32,7 +29,6 @@
     background-color: #FF5733;
     /* Color de fondo del botón */
     color: #fff;
-    margin-top: 10px;
     /* Color del texto del botón en blanco */
     padding: 10px 20px;
     /* Relleno del botón */
