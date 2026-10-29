@@ -1,0 +1,5 @@
+.content {
+  width: 90%; /* El contenido ocupa el 90% del ancho de la pantalla */
+  max-width: 1000px; /* El contenido no ocupará más de 1000px */
+  margin: 0 auto; /* Centrar el contenido */
+}

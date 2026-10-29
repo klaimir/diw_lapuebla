@@ -1,0 +1,13 @@
+
+.floating {
+    float: left;
+    width: 50%;
+}
+.container {
+    overflow: hidden;
+    background-color: lightcoral;
+}
+p {
+    background-color: lightblue;
+    clear: both;
+}
