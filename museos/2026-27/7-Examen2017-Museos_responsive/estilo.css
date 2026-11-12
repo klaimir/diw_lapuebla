@@ -1,0 +1,177 @@
+/* Resetear de estilos */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Caja central, con borde azul y centrada */
+#wrapper {
+	max-width: 1000px;
+	/* permite adaptar el ancho al dispositivo */
+	margin: 0 auto;
+	/* centra el contenedor horizontalmente */
+	border: 2px solid blue;
+	/* pone el borde azul alrededor del contenedor */
+}
+
+/* Zona del header */
+header {
+	position: relative;
+	background-image: url("imagenes/header.jpg");
+	height: 222px;
+	/* altura es obligatoria para que se vea la imagen de fondo */
+	border-bottom: 2px solid black;
+}
+
+#rotulo {
+	color: white;
+	font-weight: bolder;
+	font-size: 2em;
+	right: 10px;
+	bottom: 25px;
+	position: absolute;
+}
+
+/* Menú de navegación */
+nav {
+	background-color: lightgray;
+	/* Color de fondo del menú */
+	padding: 20px;
+	/* Espaciado interno del menú */
+	border-bottom: 2px solid black;
+}
+
+nav ul {
+	list-style-type: none;
+	/* Quitamos las viñetas de la lista */
+}
+
+nav li {
+	display: inline-block;
+	/* Ítems del menú en una línea horizontal */
+	margin-right: 5px;
+}
+
+nav a {
+	text-decoration: none;
+	/* Quitamos el subrayado de los enlaces */
+}
+
+/* Efecto hover para los enlaces del menú con pseudo-clase */
+nav a:hover {
+	text-decoration: underline;
+}
+
+#recuadro {
+	padding: 10px 20px;
+	color: violet;
+	font-weight: bolder;
+	/* negrita */
+	font-size: 1.5em;
+	background-color: white;
+	border-radius: 15px;
+	/* Bordes redondeados */
+}
+
+#recuadro:hover {
+	background-color: violet;
+	color: black;
+}
+
+/* main */
+main {
+	float: left;
+	padding: 25px 5px;
+	height: 650px;
+	/* Necesario tanto en main como en nav para que se vea el fondo de ambos */
+}
+
+main h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 1.5em;
+	color: blue;
+}
+
+main p {
+	text-indent: 25px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+/* info-museos */
+#info-museos {
+	padding: 10px;
+}
+
+#info-museos div {
+	float: left;
+	width: 33.33%;
+	height: 200px;
+	/* Una posible solución que todos los div tengan la misma altura
+	y así no haya que hacer un clear: both; en el cuarto elemento */
+	text-align: center;
+}
+
+#info-museos div img {
+	max-width: 80%;
+	border-radius: 20px;
+}
+
+/* footer */
+footer {
+	clear: both;
+	background-image: url("./imagenes/mar2.jpg");
+	color: white;
+	font-weight: bold;
+	border-top: 2px solid black;
+	text-align: center;
+	padding: 10px 0;
+	overflow: hidden;
+	/* Necesario para que se vea el fondo del footer */
+}
+
+footer div {
+	width: 50%;
+	float: left;
+}
+
+/* Medias Querys */
+
+/* Para pantallas inferiores a 1000px */
+@media (max-width: 1000px) {
+	nav li {
+		display: block;
+		/* Ítems del menú en una columna vertical */
+		margin-right: 0;
+		/* Eliminamos el margen derecho */
+		margin-bottom: 10px;
+		/* Añadimos un margen inferior para separar los ítems */
+		text-align: center;
+	}
+}
+
+@media (max-width: 700px) {
+	footer div {
+		width: 100%;
+		float: left;
+	}
+
+	main {
+		overflow: scroll;
+	}
+
+	#info-museos div {
+		width: 50%;
+	}
+}
+
+@media (max-width: 480px) {
+	#info-museos div {
+		width: 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+}
