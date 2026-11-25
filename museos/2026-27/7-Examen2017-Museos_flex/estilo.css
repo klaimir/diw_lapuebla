@@ -1,0 +1,188 @@
+/* Reseteador de estilos */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* wrapper */
+#wrapper {
+	max-width: 1000px;
+	margin: 0 auto;
+	/* Centrar el horizontal */
+	border: 2px solid blue;
+	/* Alinea los tres elementos (header, container y footer) en columna */
+	display: flex;
+	flex-direction: column;
+}
+
+/* header */
+header {
+	height: 222px;
+	background-image: url("./imagenes/header.jpg");
+	border-bottom: 2px solid black;
+	/* Alinea el rótulo en la esquina inferior derecha */
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+}
+
+/* rotulo */
+#rotulo {
+	color: white;
+	font-size: 2em;
+	/* 32 px */
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+/* container */
+.container {
+	display: flex;
+}
+
+/* nav */
+nav {
+	border-right: 2px solid black;
+	padding: 10px;
+	/* para el menú */
+	background-color: lightgray;
+	flex: 0 1 20%;
+}
+
+/* menu lateral */
+nav ul {
+	list-style-type: none;
+	/* Quitamos las viñetas de la lista */
+	text-align: center;
+	/* Alineamos los elementos del menú en columna */
+	display: flex;
+	flex-direction: column;
+}
+
+nav ul li {
+	margin-bottom: 20px;
+	/* Separación entre los elementos del menú */
+	font-weight: bold;
+}
+
+nav li a {
+	text-decoration: none;
+}
+
+/* recuadro */
+#recuadro {
+	background-color: white;
+	color: palevioletred;
+	padding: 10px;
+	border-radius: 20px;
+}
+
+/* main */
+main {
+	padding: 25px 5px;
+	flex: 0 1 80%;
+}
+
+main h1 {
+	text-align: center;
+	margin-bottom: 20px;
+	font-size: 1.5em;
+	color: blue;
+}
+
+main p {
+	text-indent: 25px;
+	margin-bottom: 10px;
+	text-align: justify;
+}
+
+/* info-museos */
+#info-museos {
+	padding: 10px;
+	display: flex;
+	/* Para que los div se pongan en la siguiente línea si no caben */
+	flex-wrap: wrap;
+}
+
+#info-museos div {
+	flex: 0 1 33.33%;
+	height: 200px;
+	/* Una posible solución que todos los div tengan la misma altura
+	y así no haya que hacer un clear: both; en el cuarto elemento */
+	text-align: center;
+}
+
+#info-museos div img {
+	max-width: 90%;
+	border-radius: 20px;
+}
+
+/* footer */
+footer {
+	background-image: url("./imagenes/mar2.jpg");
+	color: white;
+	font-weight: bold;
+	border-top: 2px solid black;
+	text-align: center;
+	padding: 10px 0;
+	display: flex;
+}
+
+footer div {
+	flex-basis: 50%;
+}
+
+/* Medias Querys */
+
+/* Para pantallas inferiores a 1000px */
+@media (max-width: 1000px) {
+	.container {
+		flex-direction: column;
+		/* flex-wrap: wrap; es equivalante al ocupar el 100% */
+	}
+
+	nav {
+		flex: 0 1 100%;
+		/* Quitamos el border derecho y lo ponemos debajo */
+		border-right: none;
+		border-bottom: 2px solid black;
+	}
+
+	main {
+		flex: 0 1 100%;
+	}
+}
+
+@media (max-width: 700px) {
+	footer {
+		flex-direction: column;
+		/* flex-wrap: wrap; es equivalante al ocupar el 100% */
+	}
+
+	/* No hace falta cambiar el flex-basis de los div del footer porque ya ocupan el 100% */
+
+	#info-museos div {
+		flex: 0 1 50%;
+	}
+
+	#info-museos div img {
+		max-width: 80%;
+	}
+
+	/* Centrar el rótulo del header */
+	header {
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+@media (max-width: 480px) {
+	#info-museos div {
+		flex: 0 1 100%;
+		height: auto;
+		margin-bottom: 10px;
+	}
+}
