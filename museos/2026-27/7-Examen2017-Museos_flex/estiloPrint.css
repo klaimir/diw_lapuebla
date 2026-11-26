@@ -1,0 +1,7 @@
+header, footer, nav {
+    display: none;
+}
+
+.container {
+	justify-content: center;
+}
